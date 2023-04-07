@@ -7,7 +7,7 @@
   - name: Copy content
     copy:
       content: "welcome to do447 test web"
-      dest: "/var/www/html/inex.html"
+      dest: "/var/www/html/index.html"
   - name: Start service
     service:
       name: "httpd"
