@@ -4,3 +4,11 @@
     package:
       name: "httpd"
       state: present
+  - name: Copy content
+    copy:
+      content: "welcome to do447 test web"
+      dest: "/var/www/html/"
+  - name: Start service
+    service:
+      name: "httpd"
+      state: started
