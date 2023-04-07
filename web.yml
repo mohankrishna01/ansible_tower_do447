@@ -6,7 +6,7 @@
       state: present
   - name: Copy content
     copy:
-      content: "welcome to do447 test web"
+      content: "welcome to do447 test web - add more content"
       dest: "/var/www/html/index.html"
   - name: Start service
     service:
