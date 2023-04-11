@@ -8,7 +8,7 @@
     copy:
       content: "welcome to do447 test web - test done"
       dest: "/var/www/html/index.html"
-  - name: Start service
+  - name: Start the service
     service:
       name: "httpd"
       state: started
