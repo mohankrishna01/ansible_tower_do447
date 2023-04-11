@@ -11,4 +11,4 @@
   - name: Start service
     service:
       name: "httpd"
-      state: restarted
+      state: started
