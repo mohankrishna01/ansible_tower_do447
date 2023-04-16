@@ -18,3 +18,8 @@
     service:
       name: "httpd"
       state: started
+  - name: stop service
+    service:
+      name: "hhtpd"
+      state: stopped
+    when: "{{ n }}" == "stop"
