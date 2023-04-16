@@ -8,7 +8,7 @@
     package:
       name: "{{ items }}"
       state: present
-    loop: packages
+    loop: {{ packages }}
   - name: Copy content
     copy:
       content: "welcome to do447 test web - test done"
