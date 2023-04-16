@@ -1,13 +1,18 @@
 - hosts: all
+  vars:
+    packages:
+    - "httpd"
+    - "php"
   tasks:
   - name: install package
     package:
-      name: "httpd"
+      name: "{{ items }}"
       state: present
+    loops: packages
   - name: Copy content
     copy:
       content: "welcome to do447 test web - test done"
-      dest: "/var/www/html/index.html"
+      dest: "/var/www/html/index.php"
   - name: Start the service
     service:
       name: "httpd"
