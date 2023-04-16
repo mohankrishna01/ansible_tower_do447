@@ -1,5 +1,6 @@
 - hosts: all
   vars:
+    name: "tr"
     packages:
     - "httpd"
     - "php"
@@ -11,7 +12,7 @@
     loop: "{{ packages }}"
   - name: Copy content
     copy:
-      content: "welcome to do447 test web - test done"
+      content: "welcome to do447 test web - test done {{ name }}"
       dest: "/var/www/html/index.php"
   - name: Start the service
     service:
