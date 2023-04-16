@@ -20,6 +20,6 @@
       state: started
   - name: stop service
     service:
-      name: "hhtpd"
+      name: "httpd"
       state: stopped
     when:  n == "stop"
