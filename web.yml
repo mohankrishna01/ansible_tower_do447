@@ -12,7 +12,7 @@
     loop: "{{ packages }}"
   - name: Copy content
     copy:
-      content: "welcome to do447 test web - test done {{ name }}"
+      content: "welcome to do447 test web - test done - schedule {{ name }}"
       dest: "/var/www/html/index.php"
   - name: Start the service
     service:
