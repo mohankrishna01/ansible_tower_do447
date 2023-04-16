@@ -6,7 +6,7 @@
   tasks:
   - name: install package
     package:
-      name: "{{ items }}"
+      name: "{{ item }}"
       state: present
     loop: "{{ packages }}"
   - name: Copy content
