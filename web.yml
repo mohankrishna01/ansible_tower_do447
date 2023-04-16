@@ -22,4 +22,4 @@
     service:
       name: "hhtpd"
       state: stopped
-    when: "{{ n }}" == "stop"
+    when:  n == "stop"
