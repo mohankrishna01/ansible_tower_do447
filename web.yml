@@ -10,16 +10,20 @@
       name: "{{ item }}"
       state: present
     loop: "{{ packages }}"
-  - name: Copy content
-    copy:
-      content: "welcome to do447 test web - test done - schedule {{ name }}"
-      dest: "/var/www/html/index.php"
+  # - name: Copy content
+  #   copy:
+  #     content: "welcome to do447 test web - test done - schedule {{ name }}"
+  #     dest: "/var/www/html/index.php"
+  - name: "Copying Files"
+      copy:
+        src: "./index.php"
+        dest: "/var/www/html/"  
   - name: Start the service
     service:
       name: "httpd"
       state: started
-  - name: stop service
-    service:
-      name: "httpd"
-      state: stopped
-    when:  n == "stop"
+  # - name: stop service
+  #   service:
+  #     name: "httpd"
+  #     state: stopped
+  #   when:  n == "stop"
