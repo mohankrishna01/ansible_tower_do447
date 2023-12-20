@@ -15,9 +15,9 @@
   #     content: "welcome to do447 test web - test done - schedule {{ name }}"
   #     dest: "/var/www/html/index.php"
   - name: "Copying Files"
-      copy:
-        src: "./index.php"
-        dest: "/var/www/html/"  
+    copy:
+      src: "./index.php"
+      dest: "/var/www/html/"  
   - name: Start the service
     service:
       name: "httpd"
